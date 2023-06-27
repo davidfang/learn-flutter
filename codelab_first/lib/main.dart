@@ -164,7 +164,9 @@ class FavoritesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
     if (appState.favorites.isEmpty) {
-      return const Text('目前没有收藏');
+      return const Center(
+        child: Text('目前没有收藏'),
+      );
     }
     return ListView(
       children: [
