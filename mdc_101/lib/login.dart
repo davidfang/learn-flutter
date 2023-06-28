@@ -24,7 +24,10 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               Image.asset('assets/diamond.png'),
               const SizedBox(height: 16),
-              const Text('SHRINE'),
+              Text(
+                'SHRINE',
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
             ],
           ),
           TextField(
@@ -44,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
             controller: _passwordController,
           ),
           OverflowBar(
-            alignment: MainAxisAlignment.end,
+            alignment: MainAxisAlignment.center,
             children: [
               TextButton(
                 child: const Text('CANCEL'),
@@ -52,10 +55,18 @@ class _LoginPageState extends State<LoginPage> {
                   _usernameController.clear();
                   _passwordController.clear();
                 },
+                style: TextButton.styleFrom(
+                    foregroundColor: Theme.of(context).colorScheme.secondary,
+                    shape: const BeveledRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(7)))),
               ),
               ElevatedButton(
                 child: const Text('NEXT'),
                 onPressed: () => {Navigator.pop(context)},
+                style: ElevatedButton.styleFrom(
+                    elevation: 8,
+                    shape: const BeveledRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(7)))),
               )
             ],
           ),

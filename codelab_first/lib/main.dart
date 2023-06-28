@@ -168,17 +168,22 @@ class FavoritesPage extends StatelessWidget {
         child: Text('目前没有收藏'),
       );
     }
-    return ListView(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8),
-          child: Text('我的${appState.favorites.length}个收藏：'),
+    return Material(
+        elevation: 16.0,
+        shape: const BeveledRectangleBorder(
+          borderRadius: BorderRadius.only(topLeft: Radius.circular(46.0)),
         ),
-        for (var favorite in appState.favorites)
-          ListTile(
-              leading: const Icon(Icons.favorite),
-              title: Text(favorite.asLowerCase)),
-      ],
-    );
+        child: ListView(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: Text('我的${appState.favorites.length}个收藏：'),
+            ),
+            for (var favorite in appState.favorites)
+              ListTile(
+                  leading: const Icon(Icons.favorite),
+                  title: Text(favorite.asLowerCase)),
+          ],
+        ));
   }
 }
