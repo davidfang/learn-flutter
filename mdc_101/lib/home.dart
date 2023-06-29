@@ -36,19 +36,23 @@ class HomePage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          product.name,
-                          style: theme.textTheme.labelLarge,
-                          maxLines: 1,
-                          softWrap: false,
-                          overflow: TextOverflow.ellipsis,
+                        Expanded(
+                          child: Text(
+                            product.name,
+                            style: theme.textTheme.labelLarge,
+                            maxLines: 1,
+                            softWrap: false,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
-                        const SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          formatter.format(product.price),
-                          style: theme.textTheme.labelMedium,
+                        // const SizedBox(
+                        //   height: 8,
+                        // ),
+                        Expanded(
+                          child: Text(
+                            formatter.format(product.price),
+                            style: theme.textTheme.labelMedium,
+                          ),
                         )
                       ],
                     ),
