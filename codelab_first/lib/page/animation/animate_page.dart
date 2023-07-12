@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /// https://flutter.cn/docs/cookbook/animation/page-route-animation
 class AnimatePage extends StatelessWidget {
   const AnimatePage({super.key});
-  static String routeName = '/AnimatePage';
+  static String routeName = '/animation/AnimatePage';
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +35,9 @@ Route<Object?> _createRoute() {
             Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
         final offsetAnimation = animation.drive(tween);
         final curvedAnimation = CurvedAnimation(
-    parent: animation,
-    curve: curve,
-  );
+          parent: animation,
+          curve: curve,
+        );
         return SlideTransition(
           // position: offsetAnimation,
           position: tween.animate(curvedAnimation),

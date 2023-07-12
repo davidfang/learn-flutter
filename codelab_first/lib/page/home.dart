@@ -20,10 +20,13 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             _gridItem(context, "randomWords", '/randomWords',
                 description: '随机生成英文字符'),
-            _gridItem(context, '动画页面', '/AnimatePage',
+            _gridItem(context, '动画页面', '/animation/AnimatePage',
                 description: '为页面切换加入动画效果'),
-            _gridItem(context, '物理模拟动画效果', '/PhysicsCardDragDemo',
+            _gridItem(context, '物理模拟动画效果', '/animation/PhysicsCardDragDemo',
                 description: 'Widget 的物理模拟动画效果'),
+            _gridItem(
+                context, 'Container 里的动画渐变效果', '/animation/animated_container',
+                description: 'Container 里的动画渐变效果')
           ],
         ));
   }

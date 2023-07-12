@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 ///
 class PhysicsCardDragDemo extends StatelessWidget {
   const PhysicsCardDragDemo({super.key});
-  static String routName = '/PhysicsCardDragDemo';
+  static String routName = '/animation/PhysicsCardDragDemo';
 
   @override
   Widget build(BuildContext context) {
