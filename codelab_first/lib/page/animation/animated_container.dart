@@ -3,10 +3,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 ///文档说明
-///
+///https://flutter.cn/docs/cookbook/animation/animated-container
 
 class AnimatedContainerApp extends StatefulWidget {
-  static String routName = '/animation/animated_container';
+  static String routeName = '/animation/animated_container';
 
   const AnimatedContainerApp({super.key});
 

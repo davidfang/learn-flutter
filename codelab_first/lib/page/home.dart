@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'animation/animate_page.dart';
+import 'animation/animated_container.dart';
+import 'animation/opacity_animation.dart';
+import 'animation/physics_simulation.dart';
+import 'design.dart';
+import 'randomWords.dart';
+
 class HomePage extends StatelessWidget {
   static String routeName = '/homePage';
 
@@ -18,15 +25,18 @@ class HomePage extends StatelessWidget {
           crossAxisCount: 4,
           childAspectRatio: 2 / 1,
           children: <Widget>[
-            _gridItem(context, "randomWords", '/randomWords',
+            _gridItem(context, "randomWords", RandomWordsPage.routeName,
                 description: '随机生成英文字符'),
-            _gridItem(context, '动画页面', '/animation/AnimatePage',
+            _gridItem(context, '动画页面', AnimatePage.routeName,
                 description: '为页面切换加入动画效果'),
-            _gridItem(context, '物理模拟动画效果', '/animation/PhysicsCardDragDemo',
+            _gridItem(context, '物理模拟动画效果', PhysicsCardDragDemo.routeName,
                 description: 'Widget 的物理模拟动画效果'),
             _gridItem(
-                context, 'Container 里的动画渐变效果', '/animation/animated_container',
-                description: 'Container 里的动画渐变效果')
+                context, 'Container 里的动画渐变效果', AnimatedContainerApp.routeName,
+                description: 'Container 里的动画渐变效果'),
+            _gridItem(context, 'Widget 的淡入淡出效果', OpacityAnimation.routeName,
+                description: 'Widget 的淡入淡出效果'),
+                _gridItem(context, '简单设计', Design.routeName,description: '简单设计'),
           ],
         ));
   }
