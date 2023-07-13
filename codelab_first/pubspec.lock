@@ -139,6 +139,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.8.3"
+  playing_cards:
+    dependency: "direct main"
+    description:
+      name: playing_cards
+      sha256: b44d29025fa8776daa930dadfdefe6ec426ae2606941c167f7a4a24de29a4e8a
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.3.1+9"
   provider:
     dependency: "direct main"
     description:

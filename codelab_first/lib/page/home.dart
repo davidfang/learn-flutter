@@ -4,6 +4,7 @@ import 'animation/animate_page.dart';
 import 'animation/animated_container.dart';
 import 'animation/opacity_animation.dart';
 import 'animation/physics_simulation.dart';
+import 'card_home.dart';
 import 'design.dart';
 import 'randomWords.dart';
 
@@ -36,7 +37,8 @@ class HomePage extends StatelessWidget {
                 description: 'Container 里的动画渐变效果'),
             _gridItem(context, 'Widget 的淡入淡出效果', OpacityAnimation.routeName,
                 description: 'Widget 的淡入淡出效果'),
-                _gridItem(context, '简单设计', Design.routeName,description: '简单设计'),
+            _gridItem(context, '简单设计', Design.routeName, description: '简单设计'),
+            _gridItem(context, '扑克demo', CardHome.routeName, description: '简单展示一个扑克'),
           ],
         ));
   }
