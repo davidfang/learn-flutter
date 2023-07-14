@@ -88,7 +88,9 @@ class _CardHomeState extends State<CardHome> {
         style: const TextStyle(color: Colors.black)),
     Suit.joker: SuitStyle(builder: (context) => Container()),
   });
-  Set<Puke> _cards = Set();
+  final Set<Puke> _cards = {};
+
+  Set<String> _point24 = {};
 
   @override
   Widget build(BuildContext context) {
@@ -116,6 +118,13 @@ class _CardHomeState extends State<CardHome> {
                                 style: myCardStyles),
                           ))
                       .toList()),
+            ),
+            Center(
+              child: _point24.isEmpty
+                  ? const Text('无法组合24点')
+                  : Column(
+                      children: _point24.toList().map((e) => Text(e)).toList(),
+                    ),
             ),
             Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
               DropdownButton<Suit>(
@@ -151,9 +160,16 @@ class _CardHomeState extends State<CardHome> {
     var random = Random();
     setState(() {
       _cards.clear();
+      // _point24.clear();
       for (var i = 0; _cards.length < 4; i++) {
         _cards.add(Puke(random.nextInt(Suit.values.length - 1),
             random.nextInt(CardValue.values.length - 2)));
+      }
+      var abcd = _cards.map((e) => e.value).toList();
+      // _point24 = _get24(abcd[0], abcd[1], abcd[2], abcd[3]);
+
+      if (_point24.isNotEmpty) {
+        print(_point24);
       }
     });
   }
