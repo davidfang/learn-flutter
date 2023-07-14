@@ -36,12 +36,19 @@ class _DesignState extends State<Design> {
     super.didChangeDependencies();
   }
 
+  List<bool> _clicked = [false, false, false];
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
             title: const Text('简单设计'),
             bottom: const TabBar(tabs: [
               Tab(
@@ -76,26 +83,86 @@ class _DesignState extends State<Design> {
           )),
           body: TabBarView(
             children: [
-              Center(
-                  child: ElevatedButton(
-                      onPressed: () {
-                        final snackBar = SnackBar(
-                          content: const Text('这是一个SnackBar'),
-                          showCloseIcon: true,
-                          action: SnackBarAction(
-                              label: 'label',
-                              onPressed: () {
-                                print('object');
-                              }),
-                        );
-                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                      },
-                      child: const Text('显示SnackBar'))),
+              _tab1(context),
               // const Icon(Icons.directions_car),
-              const Icon(Icons.directions_bike),
+              Container(
+                  width: 300,
+                  height: 300,
+                  color: Colors.yellow,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                          bottom: _clicked[0] ? 15 : 10,
+                          right: 50,
+                          child: InkWell(
+                            child: Container(
+                              width: 100,
+                              height: 100,
+                              color: Colors.red,
+                            ),
+                            onTap: () {
+                              print('you clicked red');
+                              setState(() {
+                                _clicked[0] = !_clicked[0];
+                              });
+                            },
+                          )),
+                      Positioned(
+                          bottom: _clicked[1] ? 15 : 10,
+                          right: 30,
+                          child: InkWell(
+                            child: Container(
+                              width: 100,
+                              height: 100,
+                              color: Colors.green,
+                            ),
+                            onTap: () {
+                              print('you clicked green');
+                              setState(() {
+                                _clicked[1] = !_clicked[0];
+                              });
+                            },
+                          )),
+                      Positioned(
+                          bottom: _clicked[2] ? 15 : 10,
+                          right: 10,
+                          child: InkWell(
+                            child: Container(
+                              width: 100,
+                              height: 100,
+                              color: Colors.blue,
+                            ),
+                            onTap: () {
+                              print('you clicked blue');
+                              setState(() {
+                                _clicked[2] = !_clicked[0];
+                              });
+                            },
+                          )),
+                    ],
+                  )),
+              // const Icon(Icons.directions_bike),
               const Icon(Icons.directions_transit),
             ],
           ),
         ));
+  }
+
+  Center _tab1(BuildContext context) {
+    return Center(
+        child: ElevatedButton(
+            onPressed: () {
+              final snackBar = SnackBar(
+                content: const Text('这是一个SnackBar'),
+                showCloseIcon: true,
+                action: SnackBarAction(
+                    label: 'label',
+                    onPressed: () {
+                      print('object');
+                    }),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            },
+            child: const Text('显示SnackBar')));
   }
 }
