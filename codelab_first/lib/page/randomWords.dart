@@ -89,7 +89,7 @@ class GeneratorPage extends StatelessWidget {
             children: [
               ElevatedButton.icon(
                 icon: Icon(icon),
-                label: Text('收藏'),
+                label: const Text('收藏'),
                 onPressed: () => appState.toggleFavorite(),
               ),
               ElevatedButton(

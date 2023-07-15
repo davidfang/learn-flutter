@@ -90,7 +90,7 @@ class _CardHomeState extends State<CardHome> {
   });
   final Set<Puke> _cards = {};
 
-  Set<String> _point24 = {};
+  final Set<String> _point24 = {};
 
   @override
   Widget build(BuildContext context) {
@@ -165,7 +165,7 @@ class _CardHomeState extends State<CardHome> {
         _cards.add(Puke(random.nextInt(Suit.values.length - 1),
             random.nextInt(CardValue.values.length - 2)));
       }
-      var abcd = _cards.map((e) => e.value).toList();
+      // var abcd = _cards.map((e) => e.value).toList();
       // _point24 = _get24(abcd[0], abcd[1], abcd[2], abcd[3]);
 
       if (_point24.isNotEmpty) {

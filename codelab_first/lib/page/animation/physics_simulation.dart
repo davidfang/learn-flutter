@@ -28,7 +28,7 @@ class DraggableCard extends StatefulWidget {
   const DraggableCard({required this.child, super.key});
 
   @override
-  _DraggableCardState createState() => new _DraggableCardState();
+  _DraggableCardState createState() => _DraggableCardState();
 }
 
 class _DraggableCardState extends State<DraggableCard>
