@@ -6,6 +6,7 @@ import '../page/animation/opacity_animation.dart';
 import '../page/card_home.dart';
 import '../page/design.dart';
 import '../page/effects/download_button.dart';
+import '../page/effects/instagram_filter_selection.dart';
 import '../page/home.dart';
 
 import '../page/randomWords.dart';
@@ -20,4 +21,5 @@ var route = {
   Design.routeName: (context) => const Design(),
   CardHome.routeName: (context) => const CardHome(),
   DownloadButtonPage.routeName: (context) => const DownloadButtonPage(),
+  InstagramFilterSelection.routeName: (context) => const InstagramFilterSelection(),
 };
