@@ -6,6 +6,7 @@ import 'animation/opacity_animation.dart';
 import 'animation/physics_simulation.dart';
 import 'card_home.dart';
 import 'design.dart';
+import 'effects/download_button.dart';
 import 'randomWords.dart';
 
 class HomePage extends StatelessWidget {
@@ -39,6 +40,7 @@ class HomePage extends StatelessWidget {
                 description: 'Widget 的淡入淡出效果'),
             _gridItem(context, '简单设计', Design.routeName, description: '简单设计'),
             _gridItem(context, '扑克demo', CardHome.routeName, description: '简单展示一个扑克'),
+            _gridItem(context, '创建一个带进度条的下载按钮', DownloadButtonPage.routeName, description: '创建一个带进度条的下载按钮'),
           ],
         ));
   }
