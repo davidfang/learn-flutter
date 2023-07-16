@@ -8,6 +8,8 @@ import 'card_home.dart';
 import 'design.dart';
 import 'effects/download_button.dart';
 import 'effects/instagram_filter_selection.dart';
+import 'forms/form_validation.dart';
+import 'list/mixed_list.dart';
 import 'randomWords.dart';
 
 class HomePage extends StatelessWidget {
@@ -43,6 +45,8 @@ class HomePage extends StatelessWidget {
             _gridItem(context, '扑克demo', CardHome.routeName, description: '简单展示一个扑克'),
             _gridItem(context, '创建一个带进度条的下载按钮', DownloadButtonPage.routeName, description: '创建一个带进度条的下载按钮'),
             _gridItem(context, '创建一个照片滤镜选择器', InstagramFilterSelection.routeName, description: '创建一个照片滤镜选择器'),
+            _gridItem(context, '带验证表单', FormValidation.routeName, description: '构建一个有验证判断的表单'),
+            _gridItem(context, '不同列表项的列表', MixedList.routeName, description: '创建拥有不同列表项的列表'),
           ],
         ));
   }

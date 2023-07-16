@@ -7,8 +7,10 @@ import '../page/card_home.dart';
 import '../page/design.dart';
 import '../page/effects/download_button.dart';
 import '../page/effects/instagram_filter_selection.dart';
+import '../page/forms/form_validation.dart';
 import '../page/home.dart';
 
+import '../page/list/mixed_list.dart';
 import '../page/randomWords.dart';
 
 var route = {
@@ -22,4 +24,6 @@ var route = {
   CardHome.routeName: (context) => const CardHome(),
   DownloadButtonPage.routeName: (context) => const DownloadButtonPage(),
   InstagramFilterSelection.routeName: (context) => const InstagramFilterSelection(),
+  FormValidation.routeName: (context) => const FormValidation(),
+  MixedList.routeName: (context) => const MixedList(),
 };
