@@ -9,6 +9,7 @@ import 'design.dart';
 import 'effects/download_button.dart';
 import 'effects/instagram_filter_selection.dart';
 import 'forms/form_validation.dart';
+import 'list/floating_app_bar.dart';
 import 'list/mixed_list.dart';
 import 'randomWords.dart';
 
@@ -47,6 +48,7 @@ class HomePage extends StatelessWidget {
             _gridItem(context, '创建一个照片滤镜选择器', InstagramFilterSelection.routeName, description: '创建一个照片滤镜选择器'),
             _gridItem(context, '带验证表单', FormValidation.routeName, description: '构建一个有验证判断的表单'),
             _gridItem(context, '不同列表项的列表', MixedList.routeName, description: '创建拥有不同列表项的列表'),
+            _gridItem(context, '在列表顶部放置一个浮动的 app bar', FloatingAppBar.routeName, description: '在列表顶部放置一个浮动的 app bar'),
           ],
         ));
   }

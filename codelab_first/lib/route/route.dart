@@ -10,6 +10,7 @@ import '../page/effects/instagram_filter_selection.dart';
 import '../page/forms/form_validation.dart';
 import '../page/home.dart';
 
+import '../page/list/floating_app_bar.dart';
 import '../page/list/mixed_list.dart';
 import '../page/randomWords.dart';
 
@@ -26,4 +27,5 @@ var route = {
   InstagramFilterSelection.routeName: (context) => const InstagramFilterSelection(),
   FormValidation.routeName: (context) => const FormValidation(),
   MixedList.routeName: (context) => const MixedList(),
+  FloatingAppBar.routeName: (context) => const FloatingAppBar(),
 };
