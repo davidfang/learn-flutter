@@ -13,6 +13,7 @@ import '../page/home.dart';
 import '../page/list/floating_app_bar.dart';
 import '../page/list/mixed_list.dart';
 import '../page/randomWords.dart';
+import '../page/template/demo.dart';
 
 var route = {
   '/': (context) => const HomePage(),
@@ -24,8 +25,10 @@ var route = {
   Design.routeName: (context) => const Design(),
   CardHome.routeName: (context) => const CardHome(),
   DownloadButtonPage.routeName: (context) => const DownloadButtonPage(),
-  InstagramFilterSelection.routeName: (context) => const InstagramFilterSelection(),
+  InstagramFilterSelection.routeName: (context) =>
+      const InstagramFilterSelection(),
   FormValidation.routeName: (context) => const FormValidation(),
   MixedList.routeName: (context) => const MixedList(),
   FloatingAppBar.routeName: (context) => const FloatingAppBar(),
+  TemplateDemo.routeName: (context) => const TemplateDemo(),
 };

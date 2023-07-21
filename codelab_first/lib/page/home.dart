@@ -12,6 +12,7 @@ import 'forms/form_validation.dart';
 import 'list/floating_app_bar.dart';
 import 'list/mixed_list.dart';
 import 'randomWords.dart';
+import 'template/demo.dart';
 
 class HomePage extends StatelessWidget {
   static String routeName = '/homePage';
@@ -43,12 +44,21 @@ class HomePage extends StatelessWidget {
             _gridItem(context, 'Widget 的淡入淡出效果', OpacityAnimation.routeName,
                 description: 'Widget 的淡入淡出效果'),
             _gridItem(context, '简单设计', Design.routeName, description: '简单设计'),
-            _gridItem(context, '扑克demo', CardHome.routeName, description: '简单展示一个扑克'),
-            _gridItem(context, '创建一个带进度条的下载按钮', DownloadButtonPage.routeName, description: '创建一个带进度条的下载按钮'),
-            _gridItem(context, '创建一个照片滤镜选择器', InstagramFilterSelection.routeName, description: '创建一个照片滤镜选择器'),
-            _gridItem(context, '带验证表单', FormValidation.routeName, description: '构建一个有验证判断的表单'),
-            _gridItem(context, '不同列表项的列表', MixedList.routeName, description: '创建拥有不同列表项的列表'),
-            _gridItem(context, '在列表顶部放置一个浮动的 app bar', FloatingAppBar.routeName, description: '在列表顶部放置一个浮动的 app bar'),
+            _gridItem(context, '扑克demo', CardHome.routeName,
+                description: '简单展示一个扑克'),
+            _gridItem(context, '创建一个带进度条的下载按钮', DownloadButtonPage.routeName,
+                description: '创建一个带进度条的下载按钮'),
+            _gridItem(
+                context, '创建一个照片滤镜选择器', InstagramFilterSelection.routeName,
+                description: '创建一个照片滤镜选择器'),
+            _gridItem(context, '带验证表单', FormValidation.routeName,
+                description: '构建一个有验证判断的表单'),
+            _gridItem(context, '不同列表项的列表', MixedList.routeName,
+                description: '创建拥有不同列表项的列表'),
+            _gridItem(context, '在列表顶部放置一个浮动的 app bar', FloatingAppBar.routeName,
+                description: '在列表顶部放置一个浮动的 app bar'),
+            _gridItem(context, '模板demo', TemplateDemo.routeName,
+                description: '模板demo'),
           ],
         ));
   }
