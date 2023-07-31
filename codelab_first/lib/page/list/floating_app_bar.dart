@@ -48,7 +48,12 @@ class _FloatingAppBarState extends State<FloatingAppBar> {
                 const SliverAppBar(
                   title: Text('在列表顶部放置一个浮动的 app bar'),
                   floating: true,
-                  flexibleSpace: FlexibleSpaceBar(background:Image(image:NetworkImage('https://picsum.photos/250?image=9'),fit: BoxFit.cover,) ,) ,
+                  flexibleSpace: FlexibleSpaceBar(
+                    background: Image(
+                      image: NetworkImage('https://picsum.photos/250?image=9'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                   expandedHeight: 200,
                 ),
                 SliverList(
@@ -73,6 +78,30 @@ class _FloatingAppBarState extends State<FloatingAppBar> {
                   },
                 ),
               ),
+            ),
+          ),
+          Container(
+            //高度
+            height: 200,
+            padding: const EdgeInsets.all(10),
+            // 盒子样式
+            decoration: BoxDecoration(
+              //设置Border属性给容器添加边框
+              border: Border.all(
+                //为边框添加颜色
+                color: Colors.red,
+                width: 4, //边框宽度
+              ),
+            ),
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Container(color: Colors.green, width: 200),
+                Container(color: Colors.red, width: 200),
+                Container(color: Colors.orange, width: 200),
+                Container(color: Colors.brown, width: 200),
+                Container(color: Colors.cyan, width: 200),
+              ],
             ),
           )
         ],
