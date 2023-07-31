@@ -12,6 +12,7 @@ import '../page/home.dart';
 
 import '../page/list/floating_app_bar.dart';
 import '../page/list/mixed_list.dart';
+import '../page/navigation/todos_list.dart';
 import '../page/randomWords.dart';
 import '../page/template/demo.dart';
 
@@ -31,4 +32,5 @@ var route = {
   MixedList.routeName: (context) => const MixedList(),
   FloatingAppBar.routeName: (context) => const FloatingAppBar(),
   TemplateDemo.routeName: (context) => const TemplateDemo(),
+  TodosList.routeName: (context) => const TodosList(),
 };

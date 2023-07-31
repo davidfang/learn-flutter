@@ -11,6 +11,7 @@ import 'effects/instagram_filter_selection.dart';
 import 'forms/form_validation.dart';
 import 'list/floating_app_bar.dart';
 import 'list/mixed_list.dart';
+import 'navigation/todos_list.dart';
 import 'randomWords.dart';
 import 'template/demo.dart';
 
@@ -59,6 +60,8 @@ class HomePage extends StatelessWidget {
                 description: '在列表顶部放置一个浮动的 app bar'),
             _gridItem(context, '模板demo', TemplateDemo.routeName,
                 description: '模板demo'),
+            _gridItem(context, 'Todo List', TodosList.routeName,
+                description: 'Todo List 传递数据到新页面'),
           ],
         ));
   }
